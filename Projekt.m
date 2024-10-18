@@ -1,10 +1,11 @@
 close all; clear; clc;
+addpath('functions\');
 
 %1 part of data
 % Read .csv file
-XJa1 = readtable('Ja1.csv', 'VariableNamingRule', 'preserve');
-XLukas1 = readtable('Lukas1.csv', 'VariableNamingRule', 'preserve');
-XRafal1 = readtable('Rafal1.csv', 'VariableNamingRule', 'preserve');
+XJa1 = readtable('data/Ja1.csv', 'VariableNamingRule', 'preserve');
+XLukas1 = readtable('data/Lukas1.csv', 'VariableNamingRule', 'preserve');
+XRafal1 = readtable('data/Rafal1.csv', 'VariableNamingRule', 'preserve');
 % create X matrixs to solve linear regression
 [X_Ja1, X_Lukas1, X_Rafal1] = regression_matrix(XJa1, XLukas1, XRafal1);
 %data cleaning
@@ -12,9 +13,9 @@ XRafal1 = readtable('Rafal1.csv', 'VariableNamingRule', 'preserve');
 
 %2 part of data
 % Read .csv file
-XJa2 = readtable('Ja2.csv', 'VariableNamingRule', 'preserve');
-XLukas2 = readtable('Lukas2.csv', 'VariableNamingRule', 'preserve');
-XRafal2 = readtable('Rafal2.csv', 'VariableNamingRule', 'preserve');
+XJa2 = readtable('data/Ja2.csv', 'VariableNamingRule', 'preserve');
+XLukas2 = readtable('data/Lukas2.csv', 'VariableNamingRule', 'preserve');
+XRafal2 = readtable('data/Rafal2.csv', 'VariableNamingRule', 'preserve');
 % create X matrixs to solve linear regression
 [X_Ja2, X_Lukas2, X_Rafal2] = regression_matrix(XJa2, XLukas2, XRafal2);
 %data cleaning
@@ -22,9 +23,9 @@ XRafal2 = readtable('Rafal2.csv', 'VariableNamingRule', 'preserve');
 
 %3 part of data
 % Read .csv file
-XJa3 = readtable('Ja3.csv', 'VariableNamingRule', 'preserve');
-XLukas3 = readtable('Lukas3.csv', 'VariableNamingRule', 'preserve');
-XRafal3 = readtable('Rafal3.csv', 'VariableNamingRule', 'preserve');
+XJa3 = readtable('data/Ja3.csv', 'VariableNamingRule', 'preserve');
+XLukas3 = readtable('data/Lukas3.csv', 'VariableNamingRule', 'preserve');
+XRafal3 = readtable('data/Rafal3.csv', 'VariableNamingRule', 'preserve');
 % create X matrixs to solve linear regression
 [X_Ja3, X_Lukas3, X_Rafal3] = regression_matrix(XJa3, XLukas3, XRafal3);
 %data cleaning
@@ -32,9 +33,9 @@ XRafal3 = readtable('Rafal3.csv', 'VariableNamingRule', 'preserve');
 
 %4 part of data
 % Read .csv file
-XJa4 = readtable('Ja4.csv', 'VariableNamingRule', 'preserve');
-XLukas4 = readtable('Lukas4.csv', 'VariableNamingRule', 'preserve');
-XRafal4 = readtable('Rafal4.csv', 'VariableNamingRule', 'preserve');
+XJa4 = readtable('data/Ja4.csv', 'VariableNamingRule', 'preserve');
+XLukas4 = readtable('data/Lukas4.csv', 'VariableNamingRule', 'preserve');
+XRafal4 = readtable('data/Rafal4.csv', 'VariableNamingRule', 'preserve');
 % create X matrixs to solve linear regression
 [X_Ja4, X_Lukas4, X_Rafal4] = regression_matrix(XJa4, XLukas4, XRafal4);
 %data cleaning
@@ -42,8 +43,8 @@ XRafal4 = readtable('Rafal4.csv', 'VariableNamingRule', 'preserve');
 
 %5 part of data
 % Read .csv file
-XLukas5 = readtable('Lukas5.csv', 'VariableNamingRule', 'preserve');
-XRafal5 = readtable('Rafal5.csv', 'VariableNamingRule', 'preserve');
+XLukas5 = readtable('data/Lukas5.csv', 'VariableNamingRule', 'preserve');
+XRafal5 = readtable('data/Rafal5.csv', 'VariableNamingRule', 'preserve');
 % create X matrixs to solve linear regression
 [X_Lukas5, X_Rafal5] = regression_matrix1(XLukas1, XRafal1);
 %data cleaning
@@ -51,9 +52,9 @@ XRafal5 = readtable('Rafal5.csv', 'VariableNamingRule', 'preserve');
 
 %part of the test data
 % Read .csv file
-X_testJa = readtable('Test_Ja.csv', 'VariableNamingRule', 'preserve');
-X_testLukas = readtable('Test_Lukas.csv', 'VariableNamingRule', 'preserve');
-X_testRafal = readtable('Test_Rafal.csv', 'VariableNamingRule', 'preserve');
+X_testJa = readtable('data/Test_Ja.csv', 'VariableNamingRule', 'preserve');
+X_testLukas = readtable('data/Test_Lukas.csv', 'VariableNamingRule', 'preserve');
+X_testRafal = readtable('data/Test_Rafal.csv', 'VariableNamingRule', 'preserve');
 % create X matrixs to solve linear regression
 [X_Ja_Test, X_Lukas_Test, X_Rafal_Test] = regression_matrix(X_testJa, X_testLukas, X_testRafal);
 %data cleaning
